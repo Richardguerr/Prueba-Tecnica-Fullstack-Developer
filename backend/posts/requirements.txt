@@ -1,0 +1,25 @@
+# Core
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary  # Conector para PostgreSQL
+pydantic
+pydantic[email]
+alembic  # Migraciones de la base de datos
+
+# Seguridad
+pyjwt  # Manejo de JWT
+cryptography  # Soporte adicional para seguridad
+
+# Comunicación y configuración
+requests  # Para comunicación entre microservicios
+httpx  # Alternativa moderna a requests para llamadas asíncronas a microservicios
+python-dotenv  # Para cargar variables de entorno desde .env
+
+# Testing
+pytest  # Pruebas unitarias
+pytest-asyncio  # Pruebas con código asíncrono
+python-jose
+bcrypt==4.0.1
+passlib[bcrypt]==1.7.4
+python-multipart
