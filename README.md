@@ -45,8 +45,8 @@ Ambos microservicios están contenedorizados usando Docker y Docker Compose.
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd <nombre_del_proyecto>
+git clone https://github.com/Richardguerr/Pueba-Tecnica-Fullstack-Developer.git
+cd Prueba Tecnica Finanzauto
 ```
 
 
