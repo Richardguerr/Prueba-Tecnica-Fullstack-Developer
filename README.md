@@ -5,7 +5,7 @@
 Esta aplicación permite a los usuarios gestionar su perfil y sus publicaciones. Está dividida en:
 
 - **Frontend**: Desarrollado en ReactJS, permite a los usuarios registrarse, autenticarse, gestionar su perfil y crear, listar y eliminar publicaciones.
-- **Backend**: Compuesto por dos microservicios en Python:
+- **Backend**: Compuesto por dos microservicios en Python utilizando FastApi:
   - **Microservicio de Usuarios**: Maneja el registro, autenticación (con JWT) y actualización de perfiles.
   - **Microservicio de Publicaciones**: Permite crear, listar y eliminar publicaciones asociadas a un usuario autenticado.
 
@@ -46,7 +46,7 @@ Ambos microservicios están contenedorizados usando Docker y Docker Compose.
 
 ```bash
 git clone https://github.com/Richardguerr/Pueba-Tecnica-Fullstack-Developer.git
-cd Prueba Tecnica Finanzauto
+cd Prueba-Tecnica-Fullstack-Developer
 ```
 
 
@@ -90,24 +90,10 @@ docker-compose up --build
 
 - **POST** `/createpost/` - Crear una nueva publicación (requiere autenticación)
 - **GET** `/getposts/` - Listar todas las publicaciones del usuario autenticado
-- **DELETE** `/update/{id}/` - Actualizar una publicación específica
+- **PUT** `/update/{id}/` - Actualizar una publicación específica
 - **DELETE** `/posts/{id}/` - Eliminar una publicación específica
 
 ---
-
-# Capturas de Pantalla  
-
-A continuación, se muestran algunas imágenes de la aplicación en funcionamiento:  
-
-## Consola del navegador (DevTools) mostrando el token en LocalStorage  
-![DevTools LocalStorage](./assets/images/devtools-localstorage.png)  
-
-## Vista de las publicaciones del usuario  
-![Publicaciones del usuario](./assets/images/publicaciones-usuario.png)  
-
-## Formulario de Edición de Perfil  
-![Edición de Perfil](./assets/images/edicion-perfil.png)  
-
 
 
 ## Apagar los Servicios
@@ -132,4 +118,6 @@ docker-compose logs -f
 ```bash
 docker-compose up --build
 ```
+
+- El token tiene una duración de 5 minutos. Para agilizar la validación de la autenticación del usuario con los microservicios, puedes eliminarlo manualmente del LocalStorage.
 
