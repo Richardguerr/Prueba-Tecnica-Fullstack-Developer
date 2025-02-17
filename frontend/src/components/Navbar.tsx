@@ -31,7 +31,6 @@ export default function Navbar() {
           <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900">
             <li><Link to="/profile" className="py-2 px-3 text-gray-900 dark:text-white hover:text-blue-700">Perfil</Link></li>
             <li><Link to="/posts" className="py-2 px-3 text-gray-900 dark:text-white hover:text-blue-700">Posts</Link></li>
-            <li><Link to="/dashboard" className="py-2 px-3 text-gray-900 dark:text-white hover:text-blue-700">DashBoard</Link></li>
             <li><Link to="/contact" className="py-2 px-3 text-gray-900 dark:text-white hover:text-blue-700">Contacto</Link></li>
           </ul>
         </div>

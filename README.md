@@ -73,19 +73,42 @@ docker-compose up --build
 
 ## Endpoints Principales
 
-### Microservicio de Usuarios (Puerto 8001)
+### Microservicio de Usuarios (Puerto http://localhost/8001/users)
 
 - **POST** `/register/` - Registrar un nuevo usuario
 - **POST** `/login/` - Autenticar usuario (retorna un JWT)
-- **GET/PUT** `/profile/` - Ver o actualizar el perfil del usuario autenticado
+- **GET** `/geToken/` - Retorna el ususario autenticado pasandole como parametro el token.
+- **PUT** `/updateuser/` - Permite actualizar la información del usuario.
+- **DELETE** `/deleteuser/` - Permite eliminar el usuario.
+- **PUT** `/forgot-password/` - Permite recuperar la contraseña del usuario.
 
-### Microservicio de Publicaciones (Puerto 8002)
 
-- **POST** `/posts/` - Crear una nueva publicación (requiere autenticación)
-- **GET** `/posts/` - Listar todas las publicaciones del usuario autenticado
+
+
+
+### Microservicio de Publicaciones (Puerto http:/localhost/8002/posts)
+
+- **POST** `/createpost/` - Crear una nueva publicación (requiere autenticación)
+- **GET** `/getposts/` - Listar todas las publicaciones del usuario autenticado
+- **DELETE** `/update/{id}/` - Actualizar una publicación específica
 - **DELETE** `/posts/{id}/` - Eliminar una publicación específica
 
 ---
+
+# Capturas de Pantalla  
+
+A continuación, se muestran algunas imágenes de la aplicación en funcionamiento:  
+
+## Consola del navegador (DevTools) mostrando el token en LocalStorage  
+![DevTools LocalStorage](./assets/images/devtools-localstorage.png)  
+
+## Vista de las publicaciones del usuario  
+![Publicaciones del usuario](./assets/images/publicaciones-usuario.png)  
+
+## Formulario de Edición de Perfil  
+![Edición de Perfil](./assets/images/edicion-perfil.png)  
+
+
 
 ## Apagar los Servicios
 
