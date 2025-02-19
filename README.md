@@ -59,8 +59,8 @@ docker-compose up --build
 ### 3. Acceder a la aplicación
 
 - **Frontend**: [http://localhost:3000](http://localhost:3000)
-- **Microservicio de Usuarios**: [http://localhost:8001/docs](http://localhost:8001/users) 
-- **Microservicio de Publicaciones**: [http://localhost:8002/docs](http://localhost:8002/posts)
+- **Microservicio de Usuarios**: [http://localhost:8001/users](http://localhost:8001/users) 
+- **Microservicio de Publicaciones**: [http://localhost:8002/posts](http://localhost:8002/posts)
 
 ---
 
